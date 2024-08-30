@@ -41,7 +41,7 @@
 
   <% if can? :admin, Spree::Admin::ReportsController %>
     <ul class="nav nav-sidebar" id="sidebarReport">
-      <%= tab *Spree::Backend::Configuration::REPORT_TABS, url: spree.admin_sales_reports_path, icon: 'pie-chart-fill.svg' %>
+      <%= tab *Spree::Backend::Configuration::REPORT_TABS, url: spree.admin_users_path, icon: 'pie-chart-fill.svg' %>
     </ul>
   <% end %>
 
