@@ -10,6 +10,11 @@ module SpreeAnalysis
       g.test_framework :rspec
     end
 
+    # Solo agrega esta configuración si estás usando sprockets-rails
+    initializer 'spree_analysis.assets.precompile' do |app|
+      app.config.assets.precompile << 'spree/backend/override_pdf.css'
+    end
+
     initializer 'spree_analysis.environment', before: :load_config_initializers do |_app|
       SpreeAnalysis::Config = SpreeAnalysis::Configuration.new
     end
