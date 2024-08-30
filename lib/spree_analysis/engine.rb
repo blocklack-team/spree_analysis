@@ -6,12 +6,14 @@ module SpreeAnalysis
     isolate_namespace Spree
     engine_name 'spree_analysis'
 
-    # use rspec for tests
     config.generators do |g|
       g.test_framework :rspec
     end
 
-    config.assets.precompile << 'spree/backend/override_pdf.css'
+    # Solo agrega esta configuración si estás usando sprockets-rails
+    initializer 'spree_analysis.assets.precompile' do |app|
+      app.config.assets.precompile << 'spree/backend/override_pdf.css'
+    end
 
     initializer 'spree_analysis.environment', before: :load_config_initializers do |_app|
       SpreeAnalysis::Config = SpreeAnalysis::Configuration.new
