@@ -10,9 +10,6 @@ module SpreeAnalysis
       g.test_framework :rspec
     end
 
-    # Agregar esta línea para autoload de la carpeta reports
-    config.autoload_paths += %W(#{config.root}/app/reports)
-
     # Solo agrega esta configuración si estás usando sprockets-rails
     initializer 'spree_analysis.assets.precompile' do |app|
       app.config.assets.precompile << 'spree/backend/override_pdf.css'
