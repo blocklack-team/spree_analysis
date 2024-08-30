@@ -1,6 +1,6 @@
 require 'spree_core'
 require 'spree_extension'
-require 'spree'
+require './../app'
 require 'spree_analysis/configuration'
 require 'spree_analysis/engine'
 require 'spree_analysis/version'
