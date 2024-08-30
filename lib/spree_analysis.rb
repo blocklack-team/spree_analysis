@@ -9,9 +9,5 @@ module SpreeAnalysis
     def self.configure
       yield configuration if block_given?
     end
-
-    def self.configuration
-      @config ||= Spree::Report::Configuration.new
-    end
   end
 end
