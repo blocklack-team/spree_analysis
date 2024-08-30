@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   spree_version = '>=4.6.0'
   s.add_dependency 'spree', spree_version
   s.add_dependency 'spree_extension'
+  s.add_dependency 'sprockets-rails'
   s.add_dependency 'wicked_pdf'
   s.add_dependency 'wkhtmltopdf-binary'
 

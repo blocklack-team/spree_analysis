@@ -7,4 +7,6 @@ end
 
 gem 'rails-controller-testing'
 
+gem 'sprockets-rails'
+
 gemspec
